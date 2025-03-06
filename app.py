@@ -353,7 +353,7 @@ if option =="Prophet":
             with infoExpander:
                 st.write("""
                 
-                In Facebook's Prophet forecasting model, these variables are related to the forecasted values and trends:
+                In Prophet forecasting model, these variables are related to the forecasted values and trends:
     
                 yhat: This represents the forecasted value for the target variable. It's the estimated value of the variable at a specific point in time based on the historical data and the model's predictions.
                 
@@ -576,23 +576,21 @@ if option =="Statsmodels":
     statsModelsInfo = st.expander("Infos about statsmodels")
     with statsModelsInfo:
         st.markdown(""" 
-        			   Die Python-Bibliothek statsmodels ist eine leistungsstarke Sammlung von Werkzeugen zur Schätzung von statistischen Modellen, Durchführung von statistischen Tests und Exploration von Daten. Sie bietet eine breite Palette von Funktionen für die Durchführung verschiedener statistischer Analysen, einschließlich lineare Regression, Zeitreihenanalyse, generalisierte lineare Modelle, robuste lineare Modelle, nichtlineare Modelle und vieles mehr.
+        			  The main functions and methods of Statsmodels are:
 
-        				Einige der wichtigsten Funktionen und Methoden von statsmodels sind:
+Linear Regression: With Statsmodels, you can create and estimate linear regression models. This includes simple linear regression, multiple linear regression, and robust linear regression.
 
-        				Lineare Regression: Mit statsmodels können Sie lineare Regressionsmodelle erstellen und schätzen. Dies umfasst einfache lineare Regression, multiple lineare Regression und robuste lineare Regression.
+Time Series Analysis: The library provides functions for analyzing time series data, including ARIMA models (Autoregressive Integrated Moving Average), SARIMA models (Seasonal Autoregressive Integrated Moving Average), and more.
 
-        				Zeitreihenanalyse: Die Bibliothek bietet Funktionen zur Analyse von Zeitreihendaten, einschließlich ARIMA-Modelle (Autoregressive Integrated Moving Average), SARIMA-Modelle (Seasonal Autoregressive Integrated Moving Average) und vieles mehr.
+Generalized Linear Models (GLM): Statsmodels supports the estimation of GLMs, which are an extension of linear regression that allow for models with non-normally distributed error terms.
 
-        				Generalisierte lineare Modelle (GLM): statsmodels unterstützt die Schätzung von GLMs, die eine Erweiterung der linearen Regression sind und Modelle für Daten mit nicht-normalverteilten Fehlertermen ermöglichen.
+Non-parametric Tests: It also offers a variety of non-parametric tests such as the Kruskal-Wallis test, Mann-Whitney U test, and Kolmogorov-Smirnov test.
 
-        				Nichtparametrische Tests: Sie bietet auch eine Vielzahl von nichtparametrischen Tests wie den Kruskal-Wallis-Test, den Mann-Whitney-U-Test und den Kolmogorov-Smirnov-Test.
+Exploratory Data Analysis (EDA): Through visualizations and summaries, you can quickly gain insights into your data and identify key patterns or outliers.
 
-        				Explorative Datenanalyse (EDA): Durch Visualisierungen und Zusammenfassungen können Sie schnell Einblicke in Ihre Daten gewinnen und wichtige Muster oder Ausreißer identifizieren.
+Multivariate Statistics: Statsmodels enables conducting multivariate statistical analyses such as Principal Component Analysis (PCA) and Factor Analysis.
 
-        				Multivariate Statistik: statsmodels ermöglicht die Durchführung von multivariaten statistischen Analysen wie Hauptkomponentenanalyse (PCA) und Faktorenanalyse.
-
-        				Modellevaluation und Diagnostik: Die Bibliothek bietet Funktionen zur Bewertung von Modellen und zur Diagnose von Problemen wie Multikollinearität, Autokorrelation und Heteroskedastizität.""")
+Model Evaluation and Diagnostics.""")
 
 
     n = st.slider('Number of Periods/month to forcast', min_value=1, max_value=24, value=12, step=1)
